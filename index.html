@@ -30,6 +30,12 @@
 
         .section-title { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin: 40px 0 25px; }
         
+        /* HIKMATLAR STILI */
+        .quote-card { background: white; padding: 20px; border-radius: 12px; border-left: 5px solid var(--accent); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+        .quote-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+        .quote-author { color: var(--primary); font-weight: bold; display: block; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .quote-text { font-style: italic; font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 8px; }
+
         /* KITOB KARTALARI */
         .library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
         .book-card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); transition: 0.3s; position: relative; }
@@ -50,7 +56,7 @@
     <div class="menu-item"><a href="#">🏠 BOSH SAHIFA</a></div>
     <div class="menu-item" onclick="toggleMenu('portal')"><a>📖 PORTAL HAQIDA</a> <span>▼</span></div>
     <div id="portal" class="dropdown-content">
-        <a href="#">Loyiha maqsadi</a>
+        <a href="#project-purpose">Loyiha maqsadi</a>
         <a href="#">Uchinchi Renessans</a>
     </div>
     <div class="menu-item" onclick="toggleMenu('kutubxona')"><a>📚 KUTUBXONA</a> <span>▼</span></div>
@@ -58,7 +64,7 @@
         <a href="#">Barcha asarlar</a>
         <a href="#">Qo'lyozmalar</a>
     </div>
-    <div class="menu-item"><a href="#">✨ HIKMATLAR</a></div>
+    <div class="menu-item"><a href="#hikmatlar">✨ HIKMATLAR</a></div>
     <div class="menu-item"><a href="#">📰 MATBUOT</a></div>
 </div>
 
@@ -76,6 +82,51 @@
             <div class="jadid-item"><img src="rasmlar/cholpon.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Cholpon&background=c5a059&color=fff'" class="jadid-img"><div class="jadid-name">A. Cho'lpon</div></div>
             <div class="jadid-item"><img src="rasmlar/munavvarqori.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Munavvar&background=0a2e52&color=fff'" class="jadid-img"><div class="jadid-name">Munavvarqori</div></div>
         </div>
+
+        <section id="project-purpose" style="background: white; padding: 30px; border-radius: 15px; margin: 20px 0 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 8px solid var(--primary);">
+            <h2 style="color: var(--primary); margin-top: 0; font-size: 1.6rem; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px;">Loyiha maqsadi</h2>
+            <p style="font-size: 1.1rem; color: #444; text-align: justify; line-height: 1.8; margin-top: 20px;">
+                Ushbu <b>"Jadid-Library"</b> raqamli portali XX asr boshidagi Turkiston jadidlarining boy ijtimoiy-siyosiy, huquqiy va ma'rifiy merosini o'rganish hamda ommalashtirish maqsadida yaratildi. 
+                Loyiha doirasida milliy istiqlol va davlatchilik g'oyalarini o'zida mujassam etgan nodir asarlar raqamlashtirildi. 
+                Asosiy maqsadimiz — Yangi O'zbekistonda <b>Uchinchi Renessans</b> poydevorini qurishda jadid bobolarimizning ma'rifatparvarlik g'oyalaridan dasturilamal sifatida foydalanish va ularni yosh avlodga yetkazishdir.
+            </p>
+        </section>
+
+        <section id="hikmatlar">
+            <h2 class="section-title">Jadidlar hikmatlari</h2>
+            <div class="library-grid">
+                <div class="quote-card">
+                    <span class="quote-author">Mahmudxo'ja Behbudi</span>
+                    <p class="quote-text">"Dunyoda turmoq uchun dunyoviy fan va ilm lozimdur, zamona ilmidan bebahra millat boshqalarga poymol bo'lur."</p>
+                    <p class="quote-text">"Haq berilmas, olinur!"</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-author">Abdurauf Fitrat</span>
+                    <p class="quote-text">"Bu dunyo kurash maydonidir. Sog'lom tan, o'tkir aql va yaxshi axloq bu maydonning qurolidir."</p>
+                    <p class="quote-text">"G'aflatda qolgan millatning taqdiri halokatdir."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-author">Abdulla Qodiriy</span>
+                    <p class="quote-text">"Moziyga qaytib ish ko'rmoq xayrlidir."</p>
+                    <p class="quote-text">"Adabiyot har bir millatning hisli ko'ngil oynasidir."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-author">Abdulhamid Cho'lpon</span>
+                    <p class="quote-text">"Kishan kiyma, bo'yin egma, ki sen ham hur tug'ilg'onsen!"</p>
+                    <p class="quote-text">"Ko'ngil, sen bunchalar nega kishanlar ichra qolding?"</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-author">Munavvarqori Abdurashidxonov</span>
+                    <p class="quote-text">"Haqiqiy ozodlikka faqat ilm va ma'rifat orqali erishiladi."</p>
+                    <p class="quote-text">"Har bir millatning taraqqiysi yoshlarning tarbiyasiga bog'liqdir."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-author">Ishoqxon Ibrat</span>
+                    <p class="quote-text">"Ilm o'rganmoq farzdir, ammo uni millat manfaati uchun ishlatmoq qarzdir."</p>
+                    <p class="quote-text">"Millatni uyg'otmoq uchun avval uning tilini va tarixini asramoq lozim."</p>
+                </div>
+            </div>
+        </section>
 
         <h2 class="section-title">Jadidlar asarlari 1 (Bulutli saqlagich)</h2>
         <div class="library-grid">
