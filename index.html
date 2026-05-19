@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadid-Library – Milliy meros portali</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* RANG VA ASOSIY SOZLAMALAR */
         :root { 
@@ -16,6 +17,8 @@
             --text-light: #64748b;   /* Yordamchi matn */
             --white: #ffffff;
             --cloud: #10b981;        /* Yashil (bulut belgisi) */
+            --telegram: #0088cc;     /* Telegram rasmiy rangi */
+            --gmail: #ea4335;        /* Gmail rasmiy rangi */
             --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             --card-hover-shadow: 0 10px 15px -3px rgba(10, 46, 82, 0.1), 0 4px 6px -2px rgba(10, 46, 82, 0.05);
         }
@@ -399,7 +402,7 @@
             background: var(--primary); 
             color: var(--white); 
             text-align: center; 
-            padding: 35px 20px; 
+            padding: 40px 20px; 
             margin-top: 60px; 
             border-top: 4px solid var(--accent);
             font-size: 0.95rem;
@@ -407,6 +410,42 @@
 
         footer p {
             opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        /* ALOQA ICONKALARI STILI */
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-icon.tg:hover {
+            background-color: var(--telegram);
+            border-color: var(--telegram);
+            transform: translateY(-3px);
+        }
+
+        .social-icon.mail:hover {
+            background-color: var(--gmail);
+            border-color: var(--gmail);
+            transform: translateY(-3px);
         }
 
         /* RESPONSIVE DIZAYN (MOBIL VA PLANSHETLAR) */
@@ -516,7 +555,7 @@
         <div class="logo">
             <a href="#">JADID<span>-LIBRARY</span></a>
         </div>
-        
+         
         <ul class="nav-menu" id="nav-menu">
             <li class="nav-item"><a href="#" class="nav-link">🏠 Bosh sahifa</a></li>
             <li class="nav-item" onclick="toggleMobileDropdown(this)">
@@ -534,7 +573,11 @@
                 </div>
             </li>
             <li class="nav-item"><a href="#hikmatlar" class="nav-link">✨ Hikmatlar</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">📰 Matbuot</a></li>
+            <li class="nav-item">
+                <a href="https://t.me/Sizning_Telegram_Usernamengiz" target="_blank" class="nav-link">
+                    <i class="fab fa-telegram"></i> Aloqa
+                </a>
+            </li>
         </ul>
 
         <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
@@ -633,45 +676,77 @@
         </section>
 
         <section id="asarlar1">
-            <h2 class="section-title">Jadidlar asarlari 1 (Bulutli saqlagich)</h2>
+            <h2 class="section-title">Jadidlar asarlari 1</h2>
             <div class="library-grid">
                 <div class="book-card">
                     <span class="cloud-badge">Cloud</span>
                     <h3>Mahmudxo'ja Behbudi</h3>
                     <p>Tanlangan asarlar to'plami</p>
-                    <a href="https://drive.google.com/file/d/1V0G4cOU5uQyHymaVXHRfUrTbkZ3305a8/view?usp=sharing" target="_blank" class="download-btn btn-drive">🌐 Drive-dan o'qish</a>
+                    <a href="https://drive.google.com/file/d/1V0G4cOU5uQyHymaVXHRfUrTbkZ3305a8/view?usp=sharing" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
                 </div>
                 <div class="book-card">
                     <span class="cloud-badge">Cloud</span>
                     <h3>Abdurauf Fitrat</h3>
                     <p>Tanlangan asarlar to'plami</p>
-                    <a href="https://drive.google.com/file/d/1OPj78IzHPUT3anLGMyK5yVOYVuUo2wZf/view?usp=sharing" target="_blank" class="download-btn btn-drive">🌐 Drive-dan o'qish</a>
+                    <a href="https://drive.google.com/file/d/1OPj78IzHPUT3anLGMyK5yVOYVuUo2wZf/view?usp=sharing" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
                 </div>
                 <div class="book-card">
                     <span class="cloud-badge">Cloud</span>
                     <h3>Abdulhamid Cho'lpon</h3>
                     <p>Tanlangan asarlar to'plami</p>
-                    <a href="https://drive.google.com/file/d/1NJUWQ0en-HjEMv1fToeSqf1NaxaZNIoK/view?usp=sharing" target="_blank" class="download-btn btn-drive">🌐 Drive-dan o'qish</a>
+                    <a href="https://drive.google.com/file/d/1NJUWQ0en-HjEMv1fToeSqf1NaxaZNIoK/view?usp=sharing" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
+                </div>
+                <div class="book-card">
+                    <span class="cloud-badge">Cloud</span>
+                    <h3>Abdulla Avloniy</h3>
+                    <p>Tanlangan asarlar to'plami</p>
+                    <a href="https://drive.google.com/file/d/1S-Yhry0-UB-tmc0LtnHw-Q_v18xa_aNS/view?usp=drive_link" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
+                </div>
+                <div class="book-card">
+                    <span class="cloud-badge">Cloud</span>
+                    <h3>Munavvarqori</h3>
+                    <p>Tanlangan asarlar to'plami (Ilmiy-ma'rifiy merosi)</p>
+                    <a href="https://drive.google.com/file/d/1WHBGqAIzIbSIZuTj89DOpZ2TcWKtrOfN/view?usp=drive_link" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
+                </div>
+                <div class="book-card">
+                    <span class="cloud-badge">Cloud</span>
+                    <h3>Ismoil Gasprinski</h3>
+                    <p>Tanlangan asarlar to'plami</p>
+                    <a href="https://drive.google.com/file/d/1-4szdoNdrJfK7b4S_xVaMZl5fXrVaNz5/view?usp=drive_link" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
+                </div>
+                <div class="book-card">
+                    <span class="cloud-badge">Cloud</span>
+                    <h3>Sadriddin Ayniy</h3>
+                    <p>Tanlangan asarlar to'plami</p>
+                    <a href="https://drive.google.com/file/d/1fYsYx8jg7U29wn1EOp1P868oKt_icI-C/view?usp=drive_link" target="_blank" class="download-btn btn-drive">📖 O'qish</a>
                 </div>
             </div>
         </section>
 
         <section id="asarlar2">
-            <h2 class="section-title">Jadidlar asarlari 2 (PDF Yuklab olish)</h2>
+            <h2 class="section-title">Jadidlar asarlari 2</h2>
             <div class="library-grid">
-                <div class="book-card"><h3>Tanlangan asarlar</h3><p>Ishoqxon Ibrat</p><a href="kitoblar/ishoqxon_tanlangan_asarlar.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>Tanlangan asarlar</h3><p>Munavvarqori</p><a href="kitoblar/munavvarqori_tanlangan_asarlar.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>Hind sayyohining qissasi</h3><p>A. Fitrat</p><a href="kitoblar/fitrat_hind_sayyohining_qissasi.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>O'tkan kunlar</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_otkan_kunlar.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>Mehrobdan chayon</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_mehrobdan_chayon.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>Jinlar bazmi</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_jinlar_bazmi.pdf" class="download-btn">📥 PDF Yuklash</a></div>
-                <div class="book-card"><h3>Obid ketmon</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_obid_ketmon.pdf" class="download-btn">📥 PDF Yuklash</a></div>
+                <div class="book-card"><h3>Tanlangan asarlar</h3><p>Ishoqxon Ibrat</p><a href="kitoblar/ishoqxon_tanlangan_asarlar.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>Tanlangan asarlar</h3><p>Munavvarqori</p><a href="kitoblar/munavvarqori_tanlangan_asarlar.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>Hind sayyohining qissasi</h3><p>A. Fitrat</p><a href="kitoblar/fitrat_hind_sayyohining_qissasi.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>O'tkan kunlar</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_otkan_kunlar.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>Mehrobdan chayon</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_mehrobdan_chayon.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>Jinlar bazmi</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_jinlar_bazmi.pdf" class="download-btn">📚 O'qish</a></div>
+                <div class="book-card"><h3>Obid ketmon</h3><p>A. Qodiriy</p><a href="kitoblar/qodiriy_obid_ketmon.pdf" class="download-btn">📚 O'qish</a></div>
             </div>
         </section>
     </div>
 
     <footer>
         <p>Jadid-Library &copy; 2026 | Loyiha muallifi: Raximov Muhammadjon</p>
+        <div class="footer-socials">
+            <a href="https://t.me/@Raximov_Muhammadjon" target="_blank" class="social-icon tg" title="Telegram orqali bog'lanish">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="mailto:raximovmuhammadjon86@gmail.com" class="social-icon mail" title="Email orqali bog'lanish">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </footer>
 </div>
 
